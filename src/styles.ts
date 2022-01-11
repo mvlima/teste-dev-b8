@@ -34,7 +34,7 @@ export const Container = styled.div`
             button.btnClass {
                 border: none;
                 outline: 0;
-                padding: 12px;
+                padding: 12px 48px;
                 color: #ffffff;
                 background-color: #40B25C;
                 text-align: center;
@@ -45,11 +45,22 @@ export const Container = styled.div`
                 font-weight: bold;
                 border-radius: 5px;
                 transition: all 0.3s ease;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
 
                 &.btnClicked{
                     background-color: #A3F9B9;
                     color: #000000;
                 }
+
+                &.btnClicked:hover{
+                    color: #FFFFFF;
+
+                    path{ 
+                        stroke: #FFFFFF;
+                    }
+                }                
             }
 
             button.btnClass:hover {
@@ -62,6 +73,13 @@ export const Container = styled.div`
             font-size: 14px;
             font-weight: 500;
             line-height: 20px;
+        }
+
+        .price-group{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 68px;
         }
 
         .product-old-price{
